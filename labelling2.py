@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 
 # =========================
 # CONFIG
 # =========================
 SHEET_NAME = "annotation_data"
-CREDENTIAL_FILE = "credentials.json"
+ServiceAccountCredentials.from_json_keyfile_name
 
 # =========================
 # GOOGLE SHEETS CONNECTION
@@ -15,16 +15,18 @@ CREDENTIAL_FILE = "credentials.json"
 @st.cache_resource
 def init_connection():
     scope = [
-        "https://spreadsheets.google.com/feeds",
-        "https://www.googleapis.com/auth/drive"
-    ]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(
-        CREDENTIAL_FILE, scope
-    )
-    client = gspread.authorize(creds)
-    return client.open(SHEET_NAME).sheet1
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"
+]
 
-sheet = init_connection()
+creds_dict = st.secrets["gcp_service_account"]
+
+creds = Credentials.from_service_account_info(
+    creds_dict,
+    scopes=scope
+)
+
+client = gspread.authorize(creds)
 
 # =========================
 # LOAD DATA
