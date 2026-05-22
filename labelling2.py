@@ -13,19 +13,27 @@ SHEET_NAME = "annotation_data"
 # =========================
 @st.cache_resource
 def init_connection():
+
     scope = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive"
-]
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive"
+    ]
 
-creds_dict = st.secrets["gcp_service_account"]
+    creds_dict = st.secrets["gcp_service_account"]
 
-creds = Credentials.from_service_account_info(
-    creds_dict,
-    scopes=scope
-)
+    creds = Credentials.from_service_account_info(
+        creds_dict,
+        scopes=scope
+    )
 
-client = gspread.authorize(creds)
+    client = gspread.authorize(creds)
+
+    sheet = client.open(SHEET_NAME).sheet1
+
+    return sheet
+
+
+sheet = init_connection()
 
 # =========================
 # LOAD DATA
