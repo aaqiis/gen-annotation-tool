@@ -99,24 +99,485 @@ labeled_map = {
 }
 
 # =========================
-# ANNOTATOR GUIDE
+# PEDOMAN ANOTASI LENGKAP
 # =========================
-with st.sidebar.expander("📘 Annotator Guide"):
+with st.sidebar.expander("📘 PEDOMAN ANOTASI DATA", expanded=False):
+
     st.markdown("""
-### 🎯 Tujuan
-Klasifikasi berdasarkan gaya bahasa
+# Klasifikasi Generasi Berdasarkan Gaya Bahasa di Media Sosial Menggunakan IndoBERTweet
 
-### 🧑 Gen Z
-- slang, santai, emoji
+---
 
-### 🧑 Milenial
-- campuran formal-informal
+# 1. Pendahuluan
 
-### 🧑 Gen Alpha
-- Slang, emoji
+Pedoman anotasi ini disusun untuk membantu annotator melakukan pelabelan komentar media sosial berdasarkan karakteristik gaya bahasa antar generasi.
 
-### ⚠️ Catatan
-Fokus gaya bahasa, bukan isi
+Penelitian ini bertujuan membangun model klasifikasi generasi menggunakan pendekatan Natural Language Processing (NLP) dengan model IndoBERTweet.
+
+Fokus utama penelitian adalah mengidentifikasi kecenderungan generasi penulis berdasarkan pola komunikasi dan gaya bahasa yang digunakan dalam teks media sosial.
+
+Karena bahasa media sosial bersifat dinamis, informal, dan sering mengalami overlap antar generasi, proses anotasi dilakukan menggunakan pendekatan:
+
+### “Dominant Linguistic Tendency”
+
+yaitu annotator memilih satu label generasi yang paling dominan berdasarkan karakteristik linguistik dan pragmatik pada komentar.
+
+---
+
+# 2. Tujuan Anotasi
+
+Anotasi dilakukan untuk:
+
+- menghasilkan dataset berkualitas,
+- menjaga konsistensi pelabelan,
+- mengurangi subjektivitas annotator,
+- mendukung proses fine-tuning model IndoBERTweet.
+
+---
+
+# 3. Kategori Label Generasi
+
+Komentar dilabeli ke dalam satu generasi dominan:
+
+| Label | Generasi |
+|---|---|
+| Gen Alpha | Generasi Alpha |
+| Gen Z | Generasi Z |
+| Gen Y | Generasi Y (Millennial) |
+
+### ⚠️ Catatan penting
+
+Label ditentukan berdasarkan gaya bahasa dan cara komunikasi, bukan usia asli penulis.
+
+Contoh:
+- Orang berusia 30 tahun dapat menulis dengan gaya Gen Z.
+- Pengguna Gen Z dapat menggunakan gaya komunikasi Millennial.
+
+---
+
+# 4. Prinsip Dasar Anotasi
+
+## 4.1 Fokus pada Gaya Komunikasi
+
+Annotator harus menilai:
+
+- gaya bahasa,
+- struktur kalimat,
+- pola emosi,
+- pilihan kosakata,
+- cara berinteraksi,
+- framing pemikiran,
+- gaya pragmatik komunikasi.
+
+Annotator tidak boleh menentukan label berdasarkan:
+
+❌ foto profil  
+❌ username  
+❌ gender  
+❌ isi opini benar/salah  
+❌ asumsi usia pengguna  
+
+---
+
+## 4.2 Gunakan Bukti Linguistik dan Pragmatik
+
+Pelabelan dilakukan berdasarkan pola komunikasi yang muncul dalam teks.
+
+### Contoh benar
+“jir relate banget 😭”
+
+Terdapat ciri slang dan ekspresi khas Gen Z.
+
+### Contoh salah
+“Kayaknya dia masih SMP.”
+
+Penilaian berdasarkan asumsi usia, bukan isi teks.
+
+---
+
+## 4.3 Satu Komentar = Satu Label Dominan
+
+Setiap komentar wajib diberi satu label:
+
+- Gen Alpha
+- Gen Z
+- Gen Y
+
+Penelitian ini tidak menggunakan label “Unclear”.
+
+Jika komentar ambigu atau memiliki campuran ciri, annotator tetap harus memilih label berdasarkan kecenderungan komunikasi yang paling dominan.
+
+---
+
+# 5. Prioritas Penilaian
+
+Jika annotator ragu menentukan label, gunakan urutan prioritas berikut:
+
+---
+
+## PRIORITAS 1 — Gaya Pragmatik (Paling Penting)
+
+Tanyakan:
+
+### “Cara komunikasinya paling mirip generasi mana?”
+
+Bukan:
+
+### “Topiknya tentang generasi apa?”
+
+---
+
+## PRIORITAS 2 — Struktur dan Kompleksitas Kalimat
+
+| Struktur | Cenderung |
+|---|---|
+| Sangat pendek, impulsif | Gen Alpha |
+| Conversational dan reflektif | Gen Z |
+| Rapi, logis, argumentatif | Gen Y |
+
+---
+
+## PRIORITAS 3 — Pilihan Kosakata dan Slang
+
+| Ciri | Contoh | Cenderung |
+|---|---|---|
+| Meme/slang hiper-tren | sigma, gyatt, skibidi | Gen Alpha |
+| Slang digital + refleksi | relate, coping, vibes | Gen Z |
+| Bahasa semi formal/nostalgia | “zaman saya”, “menurut saya” | Gen Y |
+
+---
+
+## PRIORITAS 4 — Pola Emosi
+
+| Pola Emosi | Cenderung |
+|---|---|
+| Random, absurd, emoji-heavy | Gen Alpha |
+| Ekspresif, ironis, hiperbolik | Gen Z |
+| Stabil, dijelaskan verbal | Gen Y |
+
+---
+
+## PRIORITAS 5 — Kedewasaan Isi dan Sudut Pandang
+
+| Isi Komentar | Cenderung |
+|---|---|
+| Reaksi spontan | Gen Alpha |
+| Opini personal dan identitas diri | Gen Z |
+| Refleksi sosial dan evaluasi nilai | Gen Y |
+
+---
+
+# 6. Karakteristik Tiap Generasi
+
+---
+
+# 6.1 Gen Alpha
+
+## Karakteristik Umum
+
+Komentar sangat dipengaruhi:
+
+- meme culture,
+- absurd humor,
+- brainrot internet,
+- komunikasi ultra-singkat,
+- budaya TikTok dan gaming.
+
+Biasanya:
+- pendek,
+- impulsif,
+- minim elaborasi,
+- heavily meme-driven.
+
+---
+
+## Ciri Linguistik
+
+### Kosakata Umum
+
+- sigma
+- skibidi
+- ohio
+- gyatt
+- rizz
+- fanum tax
+- cooked
+- delulu
+
+---
+
+### Struktur Kalimat
+
+- sangat pendek,
+- tidak lengkap,
+- acak/asosiatif.
+
+Contoh:
+- “sigma ohio 💀”
+- “bro cooked 😭”
+
+---
+
+### Gaya Pragmatik
+
+Tujuan utama:
+- lucu,
+- random,
+- absurd,
+- bukan diskusi serius.
+
+---
+
+### Indikator Kuat Gen Alpha
+
+✅ Meme tanpa konteks  
+✅ Emoji absurd berlebihan  
+✅ Humor random lebih dominan daripada isi  
+✅ Minim refleksi/opini  
+
+---
+
+# 6.2 Gen Z
+
+## Karakteristik Umum
+
+Gen Z memiliki gaya komunikasi:
+
+- digital-native,
+- ekspresif,
+- ironis,
+- conversational,
+- self-aware,
+- meme-aware.
+
+Sering:
+- mencampur serius dan bercanda,
+- menggunakan humor sebagai coping,
+- memakai slang internet secara intens.
+
+---
+
+## Ciri Linguistik
+
+### Kosakata Umum
+
+- jir
+- anjir
+- relate
+- vibes
+- random
+- cringe
+- coping
+- delulu
+- valid
+- fomo
+
+---
+
+### Struktur Kalimat
+
+- conversational,
+- semi-acak,
+- seperti berbicara langsung,
+- sering tidak terlalu formal.
+
+Contoh:
+- “jujur capek bgt sama sistem kek gini 😭”
+
+---
+
+### Gaya Pragmatik
+
+- kritik personal,
+- validasi diri,
+- self-deprecating humor,
+- opini emosional,
+- humor sebagai coping mechanism.
+
+---
+
+### Indikator Kuat Gen Z
+
+✅ Sarkasme dan ironi  
+✅ Campuran serius dan bercanda  
+✅ Self-aware humor  
+✅ Slang digital tinggi  
+✅ Oversharing ringan  
+
+---
+
+# 6.3 Gen Y (Millennial)
+
+## Karakteristik Umum
+
+Gaya komunikasi Gen Y cenderung:
+
+- lebih stabil,
+- reflektif,
+- argumentatif,
+- normatif,
+- lebih formal dibanding Gen Z.
+
+Fokus komunikasi:
+- nilai sosial,
+- etika,
+- pengalaman,
+- pendidikan,
+- budaya.
+
+---
+
+## Ciri Linguistik
+
+### Kosakata Umum
+
+- menurut saya
+- sebaiknya
+- harusnya
+- etika
+- budaya
+- integritas
+- sopan santun
+
+---
+
+### Struktur Kalimat
+
+- lebih lengkap,
+- logis,
+- runtut,
+- argumentatif.
+
+Contoh:
+- “Menurut saya penggunaan AI tetap harus diverifikasi.”
+
+---
+
+### Gaya Pragmatik
+
+- memberi nasihat,
+- menjelaskan konteks,
+- membandingkan masa lalu dan sekarang,
+- refleksi sosial.
+
+---
+
+### Indikator Kuat Gen Y
+
+✅ Bahasa lebih formal  
+✅ Nada reflektif/normatif  
+✅ Argumentasi runtut  
+✅ Moral framing kuat  
+
+---
+
+# 7. Penanganan Kasus Ambigu
+
+## 7.1 Gen Z vs Gen Alpha
+
+| Jika | Label |
+|---|---|
+| Masih ada opini/refleksi | Gen Z |
+| Hanya meme/random | Gen Alpha |
+
+Contoh:
+- “brainrot jir” → Gen Z
+- “sigma ohio skibidi 💀” → Gen Alpha
+
+---
+
+## 7.2 Gen Z vs Gen Y
+
+| Jika | Label |
+|---|---|
+| Santai, sarkastik, emosional | Gen Z |
+| Reflektif, normatif, argumentatif | Gen Y |
+
+---
+
+## 7.3 Jangan Fokus pada Satu Kata
+
+Contoh:
+
+“Menurut saya sigma sekarang terlalu overrated.”
+
+Meskipun ada kata “sigma”, pola komunikasi lebih reflektif dan semi formal.
+
+→ Gen Y
+
+---
+
+# 8. Hal yang Tidak Boleh Dijadikan Patokan
+
+Annotator tidak boleh menentukan label berdasarkan:
+
+❌ topik politik  
+❌ agama  
+❌ profesi  
+❌ usia yang disebutkan  
+❌ isi opini benar/salah  
+
+Karena semua generasi dapat membahas topik yang sama.
+
+---
+
+# 9. Prosedur Anotasi
+
+## Langkah 1 — Baca Komentar Secara Utuh
+
+Pahami konteks dan pola komunikasi keseluruhan.
+
+---
+
+## Langkah 2 — Identifikasi Ciri Linguistik dan Pragmatik
+
+Perhatikan:
+- struktur kalimat,
+- slang,
+- pola emosi,
+- gaya komunikasi,
+- kedalaman isi.
+
+---
+
+## Langkah 3 — Tentukan Label Dominan
+
+Pilih:
+- Gen Alpha
+- Gen Z
+- Gen Y
+
+---
+
+# 11. Quality Control (QC)
+
+Sebagian data akan dianotasi oleh lebih dari satu annotator untuk mengukur konsistensi pelabelan.
+
+Jika terjadi perbedaan label:
+- gunakan guideline sebagai acuan utama,
+- diskusikan alasan anotasi,
+- gunakan adjudicator bila diperlukan.
+
+---
+
+# 12. Aturan Final
+
+Jika komentar:
+- absurd total → Gen Alpha
+- ironis dan digital-native → Gen Z
+- reflektif dan normatif → Gen Y
+
+---
+
+# 13. Penutup
+
+Pedoman ini dirancang untuk memastikan proses anotasi:
+- konsisten,
+- objektif,
+- dapat direplikasi,
+- sesuai kebutuhan penelitian NLP author profiling pada media sosial.
+
+Karena bahasa media sosial sangat dinamis dan overlap antar generasi, annotator diharapkan fokus pada pola komunikasi dominan, bukan asumsi usia pengguna.
 """)
 
 # =========================
