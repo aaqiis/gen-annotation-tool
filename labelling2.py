@@ -38,10 +38,11 @@ sheet = init_connection()
 # =========================
 # LOAD DATA
 # =========================
-@st.cache_data
-@st.cache_data(show_spinner=False)
 def load_data():
-    return pd.read_csv("labeling_data.csv")
+    return pd.read_csv(
+        "labeling_data.csv",
+        encoding="utf-8-sig"
+    )
 # =========================
 # GET RECORDS
 # =========================
