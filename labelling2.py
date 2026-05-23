@@ -42,9 +42,6 @@ sheet = init_connection()
 @st.cache_data(show_spinner=False)
 def load_data():
     return pd.read_csv("labeling_data.csv")
-
-data = load_data()
-
 # =========================
 # GET RECORDS
 # =========================
@@ -55,7 +52,7 @@ def get_records():
 records = get_records()
 
 record_index_map = {
-    (str(r["id"]), r["annotator"]): i + 2
+    (str(r["id"]), r["annotator"], r.get("phase", "")): i + 2
     for i, r in enumerate(records)
 }
 
@@ -85,17 +82,42 @@ annotator = st.selectbox(
 
 st.session_state.annotator = annotator
 
+# =========================
+# PHASE SELECTION
+# =========================
+mode = st.selectbox(
+    "Pilih Phase Annotation:",
+    ["pilot", "final"]
+)
+
+# =========================
+# LOAD + FILTER DATA
+# =========================
+data = load_data()
+
+data = data[
+    data["phase"] == mode
+].reset_index(drop=True)
+
 if annotator == "":
     st.warning("Masukkan nama annotator dulu")
     st.stop()
 
+if st.session_state.idx >= len(data):
+    st.session_state.idx = 0
+
 # =========================
 # MAPPING LABEL
 # =========================
+phase_ids = set(data["id"].astype(str))
+
 labeled_map = {
     str(r["id"]): r["label"]
     for r in records
-    if r["annotator"] == annotator
+    if (
+        r["annotator"] == annotator
+        and str(r["id"]) in phase_ids
+    )
 }
 
 # =========================
@@ -672,7 +694,7 @@ def save_or_update(id_data, label):
 
     id_data = str(id_data)
 
-    key = (id_data, annotator)
+    key = (id_data, annotator, mode)
 
     if key in record_index_map:
 
@@ -682,7 +704,12 @@ def save_or_update(id_data, label):
 
     else:
 
-        sheet.append_row([id_data, annotator, label])
+        sheet.append_row([
+            id_data,
+            annotator,
+            label,
+            mode
+        ])
 
 # =========================
 # BUTTON NAVIGASI
