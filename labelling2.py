@@ -130,6 +130,7 @@ with st.sidebar.expander("📘 PEDOMAN ANOTASI DATA", expanded=False):
 # Klasifikasi Generasi Berdasarkan Gaya Bahasa di Media Sosial Menggunakan IndoBERTweet
 
 ---
+Dataset berasal dari media sosial periode 2023–2025. Annotator diharapkan mempertimbangkan konteks tren bahasa digital pada periode tersebut, namun tetap memprioritaskan gaya komunikasi dominan dalam teks.
 
 # 1. Pendahuluan
 
@@ -662,6 +663,12 @@ total = len(data)
 
 st.write(f"Progress: {done}/{total}")
 st.progress(done / total)
+
+st.caption(
+    "Dataset berasal dari media sosial periode 2023–2025. "
+    "Annotator diharapkan mempertimbangkan konteks tren bahasa digital pada periode tersebut, "
+    "namun tetap memprioritaskan gaya komunikasi dominan dalam teks."
+)
 
 # =========================
 # TAMPILKAN TEKS
