@@ -162,11 +162,11 @@ Anotasi dilakukan untuk:
 
 Komentar dilabeli ke dalam satu generasi dominan:
 
-| Label | Generasi |
-|---|---|
-| Gen Alpha | Generasi Alpha |
-| Gen Z | Generasi Z |
-| Gen Y | Generasi Y (Millennial) |
+| Label | Generasi | Tahun Lahir | Usia Tahun 2023 | Usia Tahun 2025 |
+|---|---|---|---|---|
+| Gen Y | Millennial | 1981–1996 | 27–42 tahun | 29–44 tahun |
+| Gen Z | Generasi Z | 1997–2012 | 11–26 tahun | 13–28 tahun |
+| Gen Alpha | Generasi Alpha | 2013 ke atas | 0–10 tahun | 0–12 tahun |
 
 ### ⚠️ Catatan penting
 
