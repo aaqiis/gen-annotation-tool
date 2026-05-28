@@ -663,7 +663,7 @@ st.write(f"Progress: {done}/{total}")
 st.progress(done / total)
 
 st.caption(
-    "Dataset berasal dari media sosial periode 2023–2025. "
+    "Dataset berasal dari komentar media sosial (Tweet/X, Tiktok, Youtube) periode 2023–2025. "
     "Annotator diharapkan mempertimbangkan konteks tren bahasa digital pada periode tersebut, "
     "namun tetap memprioritaskan gaya komunikasi dominan dalam teks."
 )
