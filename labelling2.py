@@ -447,6 +447,7 @@ Fokus komunikasi:
 - pendidikan,
 - budaya.
 
+GUIDELINE = """
 # 6.4 Indikator Budaya Digital dan Referensi Komunitas
 
 Selain gaya bahasa, annotator dapat mempertimbangkan referensi budaya digital yang sangat spesifik apabila referensi tersebut memiliki keterkaitan kuat dengan generasi tertentu.
@@ -581,50 +582,6 @@ Prioritas utama tetap mengikuti urutan penilaian pada guideline:
 - membandingkan kondisi masa lalu dan sekarang
 - mempertimbangkan dampak jangka panjang
 """
----
-
-## Ciri Linguistik
-
-### Kosakata Umum
-
-- menurut saya
-- sebaiknya
-- harusnya
-- etika
-- budaya
-- integritas
-- sopan santun
-
----
-
-### Struktur Kalimat
-
-- lebih lengkap,
-- logis,
-- runtut,
-- argumentatif.
-
-Contoh:
-- “Menurut saya penggunaan AI tetap harus diverifikasi.”
-
----
-
-### Gaya Pragmatik
-
-- memberi nasihat,
-- menjelaskan konteks,
-- membandingkan masa lalu dan sekarang,
-- refleksi sosial.
-
----
-
-### Indikator Kuat Gen Y
-
-✅ Bahasa lebih formal  
-✅ Nada reflektif/normatif  
-✅ Argumentasi runtut  
-✅ Moral framing kuat  
-
 ---
 
 # 7. Penanganan Kasus Ambigu
