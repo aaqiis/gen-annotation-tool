@@ -448,23 +448,6 @@ Fokus komunikasi:
 - budaya.
 ---
 
-# 7. Penanganan Kasus Ambigu
-
-## 7.1 Gen Z vs Gen Alpha
-
-| Jika | Label |
-|---|---|
-| Masih ada opini/refleksi | Gen Z |
-| Hanya meme/random | Gen Alpha |
-
-Contoh:
-- “brainrot jir” → Gen Z
-- “sigma ohio skibidi 💀” → Gen Alpha
-
----
-
----
-
 # 6.4 Indikator Budaya Digital dan Referensi Komunitas
 
 Selain gaya bahasa, annotator dapat mempertimbangkan referensi budaya digital yang sangat spesifik apabila referensi tersebut memiliki keterkaitan kuat dengan generasi tertentu.
@@ -661,6 +644,21 @@ Komentar yang membahas isu sosial, pekerjaan, ekonomi, keluarga, atau kebijakan 
 Topik dewasa saja tidak cukup untuk menentukan label.
 
 Yang lebih penting adalah cara penulis membangun argumen, memberikan evaluasi, dan menunjukkan sudut pandang yang matang serta reflektif.
+
+---
+
+# 7. Penanganan Kasus Ambigu
+
+## 7.1 Gen Z vs Gen Alpha
+
+| Jika | Label |
+|---|---|
+| Masih ada opini/refleksi | Gen Z |
+| Hanya meme/random | Gen Alpha |
+
+Contoh:
+- “brainrot jir” → Gen Z
+- “sigma ohio skibidi 💀” → Gen Alpha
 
 ---
 
