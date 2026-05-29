@@ -463,6 +463,207 @@ Contoh:
 
 ---
 
+---
+
+# 6.4 Indikator Budaya Digital dan Referensi Komunitas
+
+Selain gaya bahasa, annotator dapat mempertimbangkan referensi budaya digital yang sangat spesifik apabila referensi tersebut memiliki keterkaitan kuat dengan generasi tertentu.
+
+Referensi budaya digital berfungsi sebagai indikator tambahan, terutama ketika komentar sangat pendek, minim konteks, atau hanya berupa reaksi singkat.
+
+Namun, referensi budaya digital tidak boleh menjadi satu-satunya dasar pelabelan apabila gaya pragmatik komentar secara jelas menunjukkan karakteristik generasi lain.
+
+Prioritas utama tetap mengikuti urutan penilaian pada guideline:
+
+1. Gaya pragmatik
+2. Struktur dan kompleksitas kalimat
+3. Pilihan kosakata dan slang
+4. Pola emosi
+5. Kedewasaan isi dan sudut pandang
+6. Referensi budaya digital (indikator tambahan)
+
+---
+
+## 6.4.1 Gen Alpha
+
+### Referensi yang Sering Diasosiasikan dengan Gen Alpha
+
+Budaya digital Gen Alpha umumnya sangat dipengaruhi oleh:
+
+- Brainrot TikTok
+- Skibidi Toilet
+- Sigma
+- Gyatt
+- Rizz
+- Ohio
+- Fanum Tax
+- Meme absurd terbaru
+- Tung Tung Sahur
+- Roblox
+- Grow a Garden
+- Brookhaven
+- Adopt Me
+- Avatar Roblox
+- Super Sus
+- Stumble Guys
+- Karakter atau istilah brainrot viral
+- Influencer atau tokoh viral yang dominan dikonsumsi anak-anak
+
+### Contoh
+
+"Lebih suka icharinna matchanova 😭"
+
+Label: Gen Alpha
+
+"bagusnya ava zoeeee gw iri banget 🥰"
+
+Label: Gen Alpha
+
+"tungtung minal aidin wal faizin 😭"
+
+Label: Gen Alpha
+
+### Catatan
+
+Jika komentar sangat pendek dan hanya berisi referensi yang sangat spesifik terhadap budaya Gen Alpha, referensi tersebut dapat menjadi indikator kuat untuk pelabelan Gen Alpha.
+
+---
+
+## 6.4.2 Gen Z
+
+### Referensi yang Sering Diasosiasikan dengan Gen Z
+
+Budaya digital Gen Z umumnya berkaitan dengan:
+
+- TikTok
+- Instagram
+- X/Twitter
+- FYP
+- POV
+- Story Time
+- Fangirl/Fanboy Culture
+- K-pop
+- Discord
+- Spotify Wrapped
+- Meme Internet
+- Mobile Legends
+- Valorant
+- Free Fire
+- Genshin Impact
+- Among Us
+- Minecraft
+- Streaming dan konten kreator digital
+
+### Kosakata yang Sering Muncul
+
+- relate
+- valid
+- vibes
+- random
+- cringe
+- healing
+- coping
+- fomo
+- delulu
+- anjir
+- jir
+
+### Contoh
+
+"jir relate banget 😭"
+
+Label: Gen Z
+
+"spotify wrapped tahun ini kacau 😭"
+
+Label: Gen Z
+
+"main minecraft pas SD sekarang nostalgia banget"
+
+Label: Gen Z
+
+### Catatan
+
+Minecraft, Among Us, dan game populer lintas generasi tidak boleh otomatis dilabeli Gen Z.
+
+Annotator tetap harus melihat gaya komunikasi secara keseluruhan.
+
+Referensi tersebut hanya berfungsi sebagai indikator tambahan.
+
+---
+
+## 6.4.3 Gen Y (Millennial)
+
+### Referensi yang Sering Diasosiasikan dengan Gen Y
+
+Pembahasan yang sering muncul pada komentar bergaya Gen Y meliputi:
+
+#### Isu Sosial dan Kebijakan
+
+- politik
+- kebijakan pemerintah
+- ekonomi
+- pendidikan
+- hukum
+- korupsi
+- birokrasi
+- pelayanan publik
+- pembangunan
+- isu sosial masyarakat
+
+#### Kehidupan Dewasa
+
+- pekerjaan
+- karier
+- dunia profesional
+- keluarga
+- pernikahan
+- parenting
+- biaya hidup
+- investasi
+- tabungan
+- rumah tangga
+- cicilan
+- masa depan keluarga
+
+### Pola Komunikasi yang Umum
+
+- memberi nasihat
+- menjelaskan konteks
+- mengevaluasi suatu fenomena
+- mengkritik kebijakan atau sistem
+- menawarkan solusi
+- membandingkan kondisi masa lalu dan sekarang
+- mempertimbangkan dampak jangka panjang
+
+### Contoh
+
+"Menurut saya kebijakan seperti ini perlu dievaluasi karena dampaknya cukup besar bagi masyarakat."
+
+Label: Gen Y
+
+"Biaya hidup sekarang memang semakin tinggi sehingga perlu pengelolaan keuangan yang baik."
+
+Label: Gen Y
+
+"Masalahnya bukan pada teknologinya, tetapi bagaimana masyarakat menggunakannya."
+
+Label: Gen Y
+
+"Kalau saya pribadi lebih setuju pemerintah fokus memperbaiki kualitas pendidikan terlebih dahulu."
+
+Label: Gen Y
+
+### Catatan
+
+Komentar yang membahas isu sosial, pekerjaan, ekonomi, keluarga, atau kebijakan dengan nada reflektif, argumentatif, dan normatif cenderung mengarah ke Gen Y.
+
+Topik dewasa saja tidak cukup untuk menentukan label.
+
+Yang lebih penting adalah cara penulis membangun argumen, memberikan evaluasi, dan menunjukkan sudut pandang yang matang serta reflektif.
+
+---
+
 ## 7.2 Gen Z vs Gen Y
 
 | Jika | Label |
